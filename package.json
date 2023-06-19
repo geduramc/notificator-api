@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "notificator-api",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
   },
   "author": "geduramc",
   "license": "ISC",
@@ -17,5 +19,13 @@
   "devDependencies": {
     "morgan": "^1.10.0",
     "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ],
+    "rules": {
+      "prefer-promise-reject-errors": "off"
+    }
   }
 }
