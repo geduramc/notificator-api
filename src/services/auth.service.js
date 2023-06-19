@@ -1,12 +1,12 @@
 import jwt from 'jsonwebtoken'
 
-const auth = ({ paramName, paramUser, paramKey }) => {
+const auth = ({ _name, _user, _key }) => {
   return new Promise((resolve, reject) => {
-    if (paramKey !== process.env.API_KEY) reject('invalid or missing api key')
+    if (_key !== process.env.API_KEY) reject('invalid or missing api key')
     resolve({
       token: jwt.sign({
-        name: paramName,
-        user: paramUser
+        name: _name,
+        user: _user
       }, process.env.TOKEN_SECRET, null)
     })
   })

@@ -1,5 +1,6 @@
 import { generalResponse } from '../utils/generalResponse.js'
 import { authRouter } from './auth.route.js'
+import { messageRouter } from './message.route.js'
 
 export function router (app) {
   app.get('/', (req, res) => {
@@ -11,4 +12,5 @@ export function router (app) {
   })
 
   app.use('/api/auth', authRouter)
+  app.use('/api/message', messageRouter)
 }

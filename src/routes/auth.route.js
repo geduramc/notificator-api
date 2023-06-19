@@ -7,7 +7,7 @@ export const authRouter = express.Router()
 authRouter.post('/', async (req, res) => {
   try {
     const { name, user, key } = req.body
-    const data = await authService.auth({ paramName: name, paramUser: user, paramKey: key })
+    const data = await authService.auth({ _name: name, _user: user, _key: key })
     res.send(generalResponse.ok(data))
   } catch (error) {
     console.error(error)
