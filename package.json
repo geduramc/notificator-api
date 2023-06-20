@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "start": "node src/index.js"
+    "build": "babel src -d build",
+    "start": "node build/index.js"
   },
   "author": "geduramc",
   "license": "ISC",
@@ -17,6 +18,8 @@
     "jsonwebtoken": "^9.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "morgan": "^1.10.0",
     "standard": "^17.1.0"
   },
