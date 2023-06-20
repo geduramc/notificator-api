@@ -1,0 +1,31 @@
+{
+  "name": "notificator-api",
+  "version": "0.0.1",
+  "description": "notificator-api",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "geduramc",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ],
+    "rules": {
+      "prefer-promise-reject-errors": "off"
+    }
+  }
+}
