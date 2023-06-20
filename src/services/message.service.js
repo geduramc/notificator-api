@@ -7,7 +7,7 @@ const sendTelegramMessage = async ({ _sender, _message }) => {
 
   return await new Promise((resolve, reject) => {
     try {
-      fetch(`${process.env.TELEGRAM_API_URL}${process.env.TELEGRAM_API_TOKEN}/sendMessage?chat_id=${process.env.TELEGRAM_CHAT_ID}&text=${message}`)
+      fetch(`${process.env.TELEGRAM_API_URL}${process.env.TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${process.env.TELEGRAM_CHAT_ID}&text=${message}`)
         .then(response => response.json())
         .then(data => resolve(data))
     } catch (err) { reject(err) }
