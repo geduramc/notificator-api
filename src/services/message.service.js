@@ -3,7 +3,7 @@ const sendTelegramMessage = async ({ _sender, _message }) => {
   if (!_message || _message.length <= 0) throw new Error('invalid or missing message')
 
   const date = new Date().toISOString().slice(0, 10).replace(/-/g, '')
-  const message = `${date} [${(_sender.length > 0) ? _sender : 'user'}] : ${_message}`
+  const message = `[${date}] [${(_sender.length > 0) ? _sender : 'user'}] : ${_message}`
 
   return await new Promise((resolve, reject) => {
     try {
